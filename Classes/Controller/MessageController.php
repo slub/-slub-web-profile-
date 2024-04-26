@@ -49,7 +49,7 @@ class MessageController extends ActionController
      */
     public function listAction(): void
     {
-        $user = $this->userService->getUserAccount();
+        $user = $this->userService->getUserAccount() ?? [];
         $messages = $this->messageService->getMessagesForUser($user);
 
         $this->view->assign('messages', $messages);

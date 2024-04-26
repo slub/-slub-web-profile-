@@ -48,7 +48,7 @@ class WidgetService
         $objectManager = GeneralUtility::makeInstance(ObjectManager::class);
         /** @var UserService $userService */
         $userService = $objectManager->get(UserService::class);
-        $widgets = $userService->getUserDashboard()['dashboardWidgets'] ?? [];
+        $widgets = $userService->getUserDashboard()['dashboardWidgets'] ?? '';
 
         return explode(',', $widgets);
     }
