@@ -1,10 +1,16 @@
 # customsubcategory=76573001_Storage=Storage
 # customsubcategory=76573002_Api=API
+# customsubcategory=76573003_Uri=URI
 
 plugin.tx_slubwebprofile {
   settings {
     # cat=SLUB Profile Service/76573001_Storage/100; type=string; label=Default storage PID
     storagePid = 0
+
+    uri {
+      # cat=SLUB Profile Service/76573003_Uri/100; type=string; label=Uri for catalogue
+      catalogue = https://katalog.slub-dresden.de
+    }
 
     api {
       path {
@@ -20,6 +26,8 @@ plugin.tx_slubwebprofile {
         reserveCurrentDelete = /benutzer/vormerkung/loeschen/###USER_ID###
         # cat=SLUB Profile Service/76573002_Api/106; type=string; label=Path for reserved, past media
         reserveHistory = /benutzer/vormerkung/historie/###USER_ID###/page/###PAGE_CURRENT###
+        # cat=SLUB Profile Service/76573002_Api/107; type=string; label=Path for reserved, hold
+        reserveHold = /benutzer/vormerkung/abholbereit/###USER_ID###
 
         # cat=SLUB Profile Service/76573002_Api/107; type=string; label=Path for media ready for collection
         loanCurrent = /benutzer/ausleihe/aktuell/###USER_ID###

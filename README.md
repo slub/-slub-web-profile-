@@ -35,11 +35,13 @@ The general domain to call the "profile service" can be set in the field "Domain
 
 | Setup / Constant                                                 | Comment                                                                                                                                |
 |------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
+| plugin.tx_slubwebprofile.settings.uri.catalogue                  | Uri for catalogue                                                                                                                      |
 | plugin.tx_slubwebprofile.settings.api.path.bookedList            | Path to get the booked list.                                                                                                           |
 | plugin.tx_slubwebprofile.settings.api.path.bookmarkList          | Path to get the bookmark list.                                                                                                         |
 | plugin.tx_slubwebprofile.settings.api.path.reserveCurrent        | Path for currently reserved media                                                                                                      |
 | plugin.tx_slubwebprofile.settings.api.path.reserveCurrentDelete  | Path for delete reserved media                                                                                                         |
 | plugin.tx_slubwebprofile.settings.api.path.reserveHistory        | Path for reserved, past media                                                                                                          |
+| plugin.tx_slubwebprofile.settings.api.path.reserveHold           | Path for reserved, hold                                                                                                                |
 | plugin.tx_slubwebprofile.settings.api.path.loanCurrent           | Path for currently loan media                                                                                                          |
 | plugin.tx_slubwebprofile.settings.api.path.loanCurrentRenew      | Path for renew loan media                                                                                                              |
 | plugin.tx_slubwebprofile.settings.api.path.loanHistory           | Path for loaned, past media                                                                                                            |

@@ -85,6 +85,19 @@ defined('TYPO3_MODE') || die();
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
 );
 
+// Configure plugin - reserve hold
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+    'Slub.SlubWebProfile',
+    'ReserveHold',
+    [
+        'Reserve' => 'hold'
+    ],
+    [
+        'Reserve' => 'hold'
+    ],
+    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
+);
+
 // Configure plugin - loan current
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
     'Slub.SlubWebProfile',
@@ -200,6 +213,7 @@ foreach ([
     'wizard-borrowinglist' => 'Wizard/borrowing-list',
     'wizard-reservecurrent' => 'Wizard/reserve-current',
     'wizard-reservehistory' => 'Wizard/reserve-history',
+    'wizard-reservehold' => 'Wizard/reserve-hold',
     'wizard-loancurrent' => 'Wizard/loan-current',
     'wizard-loanhistory' => 'Wizard/loan-history',
     'wizard-bookmarklist' => 'Wizard/bookmark-list',

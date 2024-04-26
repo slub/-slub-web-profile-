@@ -59,6 +59,11 @@ class ApiConfiguration
     /**
      * @var string
      */
+    protected $reserveHoldUri;
+
+    /**
+     * @var string
+     */
     protected $loanCurrentUri;
 
     /**
@@ -142,6 +147,7 @@ class ApiConfiguration
         $this->setReserveCurrentUri($domain . $paths['reserveCurrent']);
         $this->setReserveCurrentDeleteUri($domain . $paths['reserveCurrentDelete']);
         $this->setReserveHistoryUri($domain . $paths['reserveHistory']);
+        $this->setReserveHoldUri($domain . $paths['reserveHold']);
         $this->setLoanCurrentUri($domain . $paths['loanCurrent']);
         $this->setLoanCurrentRenewUri($domain . $paths['loanCurrentRenew']);
         $this->setLoanHistoryUri($domain . $paths['loanHistory']);
@@ -235,6 +241,22 @@ class ApiConfiguration
     public function setReserveHistoryUri(string $reserveHistoryUri = ''): void
     {
         $this->reserveHistoryUri = $reserveHistoryUri;
+    }
+
+    /**
+     * @return string
+     */
+    public function getReserveHoldUri(): string
+    {
+        return $this->reserveHoldUri;
+    }
+
+    /**
+     * @param string $reserveHoldUri
+     */
+    public function setReserveHoldUri(string $reserveHoldUri = ''): void
+    {
+        $this->reserveHoldUri = $reserveHoldUri;
     }
 
     /**

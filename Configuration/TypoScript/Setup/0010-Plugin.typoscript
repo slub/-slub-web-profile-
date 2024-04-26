@@ -9,6 +9,10 @@ plugin.tx_slubwebprofile {
   settings {
     storagePid = {$plugin.tx_slubwebprofile.settings.storagePid}
 
+    uri {
+      catalogue = {$plugin.tx_slubwebprofile.settings.uri.catalogue}
+    }
+
     api {
       path {
         bookedList = {$plugin.tx_slubwebprofile.settings.api.path.bookedList}
@@ -17,6 +21,7 @@ plugin.tx_slubwebprofile {
         reserveCurrent = {$plugin.tx_slubwebprofile.settings.api.path.reserveCurrent}
         reserveCurrentDelete = {$plugin.tx_slubwebprofile.settings.api.path.reserveCurrentDelete}
         reserveHistory = {$plugin.tx_slubwebprofile.settings.api.path.reserveHistory}
+        reserveHold = {$plugin.tx_slubwebprofile.settings.api.path.reserveHold}
 
         loanCurrent = {$plugin.tx_slubwebprofile.settings.api.path.loanCurrent}
         loanCurrentRenew = {$plugin.tx_slubwebprofile.settings.api.path.loanCurrentRenew}

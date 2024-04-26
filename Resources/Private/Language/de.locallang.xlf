@@ -28,6 +28,26 @@
 				<source>Remove this field</source>
 				<target>Dieses Feld entfernen</target>
 			</trans-unit>
+			<trans-unit id="general.flInfo" resname="general.flInfo">
+				<source>Fernleih ID/Bestellnummer</source>
+				<target>Interlibrary loan ID/ Order number</target>
+			</trans-unit>
+			<trans-unit id="general.flPickup" resname="general.flPickup">
+				<source>Central Library, service desk</source>
+				<target>Zentralbibliothek Servicetheke</target>
+			</trans-unit>
+			<trans-unit id="general.flProgress" resname="general.flProgress">
+				<source>in progress</source>
+				<target>In Bearbeitung</target>
+			</trans-unit>
+			<trans-unit id="general.flDueDate1" resname="general.flDueDate1">
+				<source>Made available until %s</source>
+				<target>Bis zum %s bereitgestellt.</target>
+			</trans-unit>
+			<trans-unit id="general.flDueDate2" resname="general.flDueDate2">
+				<source>Made available until the end of the loan period.</source>
+				<target>Bis zum Ende der Leihfrist bereitgestellt.</target>
+			</trans-unit>
 
 			<!--
 				Event
@@ -219,7 +239,7 @@
 			<trans-unit id="reserve.label.title-volume" resname="reserve.label.title-volume">
 				<source>Title / volume / issue number</source>
 				<target>Titel / Bandangabe</target>
-			</trans-unit>			
+			</trans-unit>
 			<trans-unit id="reserve.label.additional-information" resname="reserve.label.additional-information">
 				<source>Additional information</source>
 				<target>Zusätzliche Informationen</target>
@@ -231,7 +251,7 @@
 			<trans-unit id="reserve.label.hold-position" resname="reserve.label.hold-position">
 				<source>Hold position</source>
 				<target>Position in der Vormerkliste</target>
-			</trans-unit>			
+			</trans-unit>
 			<trans-unit id="reserve.label.reservation-date" resname="reserve.label.reservation-date">
 				<source>Date of reservation</source>
 				<target>Datum der Vormerkung</target>
@@ -239,6 +259,14 @@
 			<trans-unit id="reserve.label.remove-reservation" resname="reserve.label.remove-reservation">
 				<source>Remove reservation</source>
 				<target>Vormerkung entfernen</target>
+			</trans-unit>
+			<trans-unit id="reserve.label.received-on" resname="reserve.label.received-on">
+				<source>Received on</source>
+				<target>Eingegangen am</target>
+			</trans-unit>
+			<trans-unit id="reserve.label.pickup-point" resname="reserve.label.pickup-point">
+				<source>Pickup point</source>
+				<target>Abholstelle</target>
 			</trans-unit>
 			<trans-unit id="reserve.table.reserveProgress" resname="reserve.table.reserveProgress">
 				<source>in progress…</source>
@@ -320,7 +348,7 @@
 			<trans-unit id="loan.label.title-volume" resname="loan.label.title-volume">
 				<source>Title / volume / issue number</source>
 				<target>Titel / Bandangabe</target>
-			</trans-unit>			
+			</trans-unit>
 			<trans-unit id="loan.label.additional-information" resname="loan.label.additional-information">
 				<source>Additional information</source>
 				<target>Zusätzliche Informationen</target>
@@ -336,7 +364,7 @@
 			<trans-unit id="loan.label.date-due" resname="loan.label.date-due">
 				<source>Due date</source>
 				<target>Fälligkeitsdatum</target>
-			</trans-unit>			
+			</trans-unit>
 			<trans-unit id="loan.label.date-return" resname="loan.label.date-return">
 				<source>Date of return</source>
 				<target>Datum der Rückgabe</target>
@@ -372,7 +400,7 @@
 			<trans-unit id="loan.table.FL" resname="loan.table.FL">
 				<source>Interlibrary loan</source>
 				<target>Fernleihe</target>
-			</trans-unit>			
+			</trans-unit>
 			<trans-unit id="loan.table.FLid" resname="loan.table.FLid">
 				<source>Interlibrary loan ID/ Order number</source>
 				<target>Fernleih ID / Bestellnummer</target>

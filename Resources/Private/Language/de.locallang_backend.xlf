@@ -61,7 +61,7 @@
 				<source>Fetch reserved media of a logged-in user.</source>
 				<target>Vorgemerkte Medien eines eingeloggten Benutzers holen.</target>
 			</trans-unit>
-			
+
 			<trans-unit id="contentElement.reservehistory.title" resname="contentElement.reservehistory.title">
 				<source>History: Reservations</source>
 				<target>Historie: Vormerkungen</target>
@@ -69,6 +69,15 @@
 			<trans-unit id="contentElement.reservehistory.description" resname="contentElement.reservehistory.description">
 				<source>History of reserved media</source>
 				<target>Historie vorgemerkter Medien</target>
+			</trans-unit>
+
+			<trans-unit id="contentElement.reservehold.title" resname="contentElement.reservehold.title">
+				<source>Hold: Reservations</source>
+				<target>Abholbereit: Vormerkungen</target>
+			</trans-unit>
+			<trans-unit id="contentElement.reservehold.description" resname="contentElement.reservehold.description">
+				<source>Hold reserved media</source>
+				<target>Abholbereite Vormerkungen</target>
 			</trans-unit>
 
 			<trans-unit id="contentElement.loancurrent.title" resname="contentElement.loancurrent.title">
@@ -79,7 +88,7 @@
 				<source>Loaned media of a logged-in user.</source>
 				<target>Ausgeliehene Medien eines eingeloggten Benutzers holen.</target>
 			</trans-unit>
-			
+
 			<trans-unit id="contentElement.loanhistory.title" resname="contentElement.loanhistory.title">
 				<source>History: Loans</source>
 				<target>Historie: Ausleihen</target>
@@ -172,7 +181,7 @@
 			<trans-unit id="backendLayout.accountLayout.description" resname="backendLayout.accountLayout.description">
 				<source>Two columns each for header (colpos 1,2) and content area (colpos 0,3)</source>
 				<target>Je zwei Spalten für Header (colpos 1,2) und Contentbereich (colpos 0,3)</target>
-			</trans-unit>		
+			</trans-unit>
 			<trans-unit id="backendLayout.column.leftcol" resname="backendLayout.column.leftcol">
 				<source>Left</source>
 				<target>Links</target>

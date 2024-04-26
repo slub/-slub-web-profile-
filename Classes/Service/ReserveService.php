@@ -86,4 +86,14 @@ class ReserveService
         $uri = $this->apiConfiguration->getReserveHistoryUri();
         return $this->request->process($uri);
     }
+
+    /**
+     * @return array|null
+     * @throws \JsonException
+     */
+    public function getReserveHold(): ?array
+    {
+        $uri = $this->apiConfiguration->getReserveHoldUri();
+        return $this->request->process($uri);
+    }
 }

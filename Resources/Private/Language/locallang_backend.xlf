@@ -13,7 +13,7 @@
 			<trans-unit id="pages.tx_slubwebprofile_navigationSubtitle" resname="pages.tx_slubwebprofile_navigationSubtitle">
 				<source>Navigation Subtitle</source>
 			</trans-unit>
-			
+
 			<trans-unit id="contentElement.dashboard.title" resname="contentElement.dashboard.title">
 				<source>Dashboard</source>
 			</trans-unit>
@@ -55,14 +55,21 @@
 			<trans-unit id="contentElement.reservehistory.description" resname="contentElement.reservehistory.description">
 				<source>History of reserved media</source>
 			</trans-unit>
-			
+
+			<trans-unit id="contentElement.reservehold.title" resname="contentElement.reservehold.title">
+				<source>Hold: Reservations</source>
+			</trans-unit>
+			<trans-unit id="contentElement.reservehold.description" resname="contentElement.reservehold.description">
+				<source>Hold reserved media</source>
+			</trans-unit>
+
 			<trans-unit id="contentElement.loancurrent.title" resname="contentElement.loancurrent.title">
 				<source>Loaned media</source>
 			</trans-unit>
 			<trans-unit id="contentElement.loancurrent.description" resname="contentElement.loancurrent.description">
 				<source>Loaned media of a logged-in user.</source>
 			</trans-unit>
-			
+
 			<trans-unit id="contentElement.loanhistory.title" resname="contentElement.loanhistory.title">
 				<source>History: Loans</source>
 			</trans-unit>
@@ -134,7 +141,7 @@
 			</trans-unit>
 			<trans-unit id="backendLayout.accountLayout.description" resname="backendLayout.accountLayout.description">
 				<source>Two columns each for header (colpos 1,2) and content area (colpos 0,3)</source>
-			</trans-unit>		
+			</trans-unit>
 			<trans-unit id="backendLayout.column.leftcol" resname="backendLayout.column.leftcol">
 				<source>Left</source>
 			</trans-unit>

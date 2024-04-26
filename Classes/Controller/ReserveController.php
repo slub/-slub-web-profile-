@@ -14,7 +14,10 @@ namespace Slub\SlubWebProfile\Controller;
 use Slub\SlubWebProfile\Service\PaginatorService;
 use Slub\SlubWebProfile\Service\ReserveService;
 use Slub\SlubWebProfile\Utility\FrontendUserUtility;
+use TYPO3\CMS\Core\Context\Exception\AspectNotFoundException;
+use TYPO3\CMS\Core\Exception;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
+use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
 class ReserveController extends ActionController
 {
@@ -44,6 +47,12 @@ class ReserveController extends ActionController
         $this->paginatorService = $paginatorService;
     }
 
+    /**
+     * @return void
+     * @throws \JsonException
+     * @throws AspectNotFoundException
+     * @throws Exception
+     */
     public function currentAction(): void
     {
         // Deleted reserved media
@@ -61,6 +70,9 @@ class ReserveController extends ActionController
         ]);
     }
 
+    /**
+     * @throws \JsonException
+     */
     public function historyAction(): void
     {
         $page = $this->getPage();
@@ -71,6 +83,18 @@ class ReserveController extends ActionController
         $this->view->assignMultiple([
             'paginator' => $paginator,
             'reserveHistory' => $reserveHistoryData['reserveHistory']
+        ]);
+    }
+
+    /**
+     * @throws \JsonException
+     */
+    public function holdAction(): void
+    {
+        $reserveHoldData = $this->reserveService->getReserveHold();
+
+        $this->view->assignMultiple([
+            'reserveHold' => $reserveHoldData['reserveHold']
         ]);
     }
 
