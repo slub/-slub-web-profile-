@@ -88,7 +88,7 @@ class UserDownloadData implements MiddlewareInterface
         $result = $this->downloadService->getDownload($fileFormat);
         $fileName = 'slub-data-download-' . $userIdentifier . '.' . $fileFormat;
         $contentType = ($result['contentType'] ?? 'application/force-download') . '; charset=UTF-8';
-        $content = ($result['data'] ?? '') . sprintf($this->settings['download']['dsvgoUrl'], $userIdentifier, $fileFormat);
+        $content = ($result['data'] ?? ''); // . sprintf($this->settings['download']['dsvgoUrl'], $userIdentifier, $fileFormat);
         $responseBody = new Stream('php://temp', 'rw');
         $responseBody->write($content);
 
