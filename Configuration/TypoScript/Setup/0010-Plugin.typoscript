@@ -9,8 +9,11 @@ plugin.tx_slubwebprofile {
   settings {
     storagePid = {$plugin.tx_slubwebprofile.settings.storagePid}
 
-    uri {
-      catalogue = {$plugin.tx_slubwebprofile.settings.uri.catalogue}
+    uri.catalogue = {$plugin.tx_slubwebprofile.settings.uri.catalogue}
+
+    download {
+      fileFormat = {$plugin.tx_slubwebprofile.settings.download.fileFormat}
+      dsvgoUrl = {$plugin.tx_slubwebprofile.settings.download.dsvgoUrl}
     }
 
     api {
@@ -26,6 +29,8 @@ plugin.tx_slubwebprofile {
         loanCurrent = {$plugin.tx_slubwebprofile.settings.api.path.loanCurrent}
         loanCurrentRenew = {$plugin.tx_slubwebprofile.settings.api.path.loanCurrentRenew}
         loanHistory = {$plugin.tx_slubwebprofile.settings.api.path.loanHistory}
+
+        download = {$plugin.tx_slubwebprofile.settings.api.path.download}
 
         eventList {
           0 = {$plugin.tx_slubwebprofile.settings.api.path.eventList.0}

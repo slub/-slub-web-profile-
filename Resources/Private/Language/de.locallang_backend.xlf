@@ -17,6 +17,15 @@
 				<target>Navigation Untertitel</target>
 			</trans-unit>
 
+			<trans-unit id="contentElement.downloadlist.title" resname="contentElement.downloadlist.title">
+				<source>Download list</source>
+				<target>Downloadliste</target>
+			</trans-unit>
+			<trans-unit id="contentElement.downloadlist.description" resname="contentElement.downloadlist.description">
+				<source>List of files with all user data</source>
+				<target>Liste von Dateien mit allen Benutzerdaten</target>
+			</trans-unit>
+
 			<trans-unit id="contentElement.dashboard.title" resname="contentElement.dashboard.title">
 				<source>Dashboard</source>
 				<target>Pinnwand</target>

@@ -33,34 +33,37 @@ The general domain to call the "profile service" can be set in the field "Domain
 
 #### Typoscript
 
-| Setup / Constant                                                 | Comment                                                                                                                                |
-|------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| plugin.tx_slubwebprofile.settings.uri.catalogue                  | Uri for catalogue                                                                                                                      |
-| plugin.tx_slubwebprofile.settings.api.path.bookedList            | Path to get the booked list.                                                                                                           |
-| plugin.tx_slubwebprofile.settings.api.path.bookmarkList          | Path to get the bookmark list.                                                                                                         |
-| plugin.tx_slubwebprofile.settings.api.path.reserveCurrent        | Path for currently reserved media                                                                                                      |
-| plugin.tx_slubwebprofile.settings.api.path.reserveCurrentDelete  | Path for delete reserved media                                                                                                         |
-| plugin.tx_slubwebprofile.settings.api.path.reserveHistory        | Path for reserved, past media                                                                                                          |
-| plugin.tx_slubwebprofile.settings.api.path.reserveHold           | Path for reserved, hold                                                                                                                |
-| plugin.tx_slubwebprofile.settings.api.path.loanCurrent           | Path for currently loan media                                                                                                          |
-| plugin.tx_slubwebprofile.settings.api.path.loanCurrentRenew      | Path for renew loan media                                                                                                              |
-| plugin.tx_slubwebprofile.settings.api.path.loanHistory           | Path for loaned, past media                                                                                                            |
-| plugin.tx_slubwebprofile.settings.api.path.eventList             | "language array" to collect paths to call the event list. The numbers (sys_language_uid) have to fit with your configured languages.   |
-| plugin.tx_slubwebprofile.settings.api.path.eventList.0           | Path for the sys_language_uid "0" (as example german), begins and ends with a slash, will be extended with user id                     |
-| plugin.tx_slubwebprofile.settings.api.path.eventList.1           | Path for the sys_language_uid "1" (as example english), begins and ends with a slash, will be extended with user id                    |
+| Setup / Constant                                                 | Comment                                                                                                                               |
+|------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| plugin.tx_slubwebprofile.settings.uri.catalogue                  | Uri for catalogue                                                                                                                     |
+| plugin.tx_slubwebprofile.settings.download.fileFormat            | Available file formats for download                                                                                                   |
+| plugin.tx_slubwebprofile.settings.download.dsvgoUrl              | URL to request DSVGO compliant user data                                                                                                  |
+| plugin.tx_slubwebprofile.settings.api.path.bookedList            | Path to get the booked list.                                                                                                          |
+| plugin.tx_slubwebprofile.settings.api.path.bookmarkList          | Path to get the bookmark list.                                                                                                        |
+| plugin.tx_slubwebprofile.settings.api.path.reserveCurrent        | Path for currently reserved media                                                                                                     |
+| plugin.tx_slubwebprofile.settings.api.path.reserveCurrentDelete  | Path for delete reserved media                                                                                                        |
+| plugin.tx_slubwebprofile.settings.api.path.reserveHistory        | Path for reserved, past media                                                                                                         |
+| plugin.tx_slubwebprofile.settings.api.path.reserveHold           | Path for reserved, hold                                                                                                               |
+| plugin.tx_slubwebprofile.settings.api.path.loanCurrent           | Path for currently loan media                                                                                                         |
+| plugin.tx_slubwebprofile.settings.api.path.loanCurrentRenew      | Path for renew loan media                                                                                                             |
+| plugin.tx_slubwebprofile.settings.api.path.loanHistory           | Path for loaned, past media                                                                                                           |
+| plugin.tx_slubwebprofile.settings.api.path.download              | Path for download                                                                                                                     |
+| plugin.tx_slubwebprofile.settings.api.path.eventList             | "language array" to collect paths to call the event list. The numbers (sys_language_uid) have to fit with your configured languages.  |
+| plugin.tx_slubwebprofile.settings.api.path.eventList.0           | Path for the sys_language_uid "0" (as example german), begins and ends with a slash, will be extended with user id                    |
+| plugin.tx_slubwebprofile.settings.api.path.eventList.1           | Path for the sys_language_uid "1" (as example english), begins and ends with a slash, will be extended with user id                   |
 | plugin.tx_slubwebprofile.settings.api.path.messageList           | "language array" to collect paths to call the message list. The numbers (sys_language_uid) have to fit with your configured languages. |
-| plugin.tx_slubwebprofile.settings.api.path.messageList.0         | Path for the sys_language_uid "0" (as example german), begins and ends with a slash, will be extended with user category               |
-| plugin.tx_slubwebprofile.settings.api.path.messageList.1         | Path for the sys_language_uid "1" (as example english), begins and ends with a slash, will be extended with user category              |
-| plugin.tx_slubwebprofile.settings.api.path.userAccountDetail     | "language array" to collect paths to get a single user (contains: account) data.                                                       |
-| plugin.tx_slubwebprofile.settings.api.path.userAccountDetail.0   | Path for the sys_language_uid "0" (as example german), begins and ends with a slash, will be extended with user id                     |
-| plugin.tx_slubwebprofile.settings.api.path.userAccountDetail.1   | Path for the sys_language_uid "1" (as example english), begins and ends with a slash, will be extended with user id                    |
-| plugin.tx_slubwebprofile.settings.api.path.userAccountUpdate     | Path to update a single user (contains: account) data                                                                                  |
-| plugin.tx_slubwebprofile.settings.api.path.userPinUpdate         | Path to update pin from single user (contains: account) data                                                                           |
-| plugin.tx_slubwebprofile.settings.api.path.userPasswordUpdate    | Path to update password from single user (contains: account) data                                                                      |
-| plugin.tx_slubwebprofile.settings.api.path.userDashboardDetail   | Path to get a single user (contains: dashboard) data                                                                                   |
-| plugin.tx_slubwebprofile.settings.api.path.userDashboardUpdate   | Path to update a single user (contains: dashboard) data                                                                                |
-| plugin.tx_slubwebprofile.settings.api.path.userSearchQueryDetail | Path to get a single user (contains: search query) data                                                                                |
-| plugin.tx_slubwebprofile.settings.api.path.userSearchQueryUpdate | Path to update a single user (contains: search query) data                                                                             |
+| plugin.tx_slubwebprofile.settings.api.path.messageList.0         | Path for the sys_language_uid "0" (as example german), begins and ends with a slash, will be extended with user category              |
+| plugin.tx_slubwebprofile.settings.api.path.messageList.1         | Path for the sys_language_uid "1" (as example english), begins and ends with a slash, will be extended with user category             |
+| plugin.tx_slubwebprofile.settings.api.path.userAccountDetail     | "language array" to collect paths to get a single user (contains: account) data.                                                      |
+| plugin.tx_slubwebprofile.settings.api.path.userAccountDetail.0   | Path for the sys_language_uid "0" (as example german), begins and ends with a slash, will be extended with user id                    |
+| plugin.tx_slubwebprofile.settings.api.path.userAccountDetail.1   | Path for the sys_language_uid "1" (as example english), begins and ends with a slash, will be extended with user id                   |
+| plugin.tx_slubwebprofile.settings.api.path.userAccountUpdate     | Path to update a single user (contains: account) data                                                                                 |
+| plugin.tx_slubwebprofile.settings.api.path.userPinUpdate         | Path to update pin from single user (contains: account) data                                                                          |
+| plugin.tx_slubwebprofile.settings.api.path.userPasswordUpdate    | Path to update password from single user (contains: account) data                                                                     |
+| plugin.tx_slubwebprofile.settings.api.path.userDashboardDetail   | Path to get a single user (contains: dashboard) data                                                                                  |
+| plugin.tx_slubwebprofile.settings.api.path.userDashboardUpdate   | Path to update a single user (contains: dashboard) data                                                                               |
+| plugin.tx_slubwebprofile.settings.api.path.userSearchQueryDetail | Path to get a single user (contains: search query) data                                                                               |
+| plugin.tx_slubwebprofile.settings.api.path.userSearchQueryUpdate | Path to update a single user (contains: search query) data                                                                            |
 
 [1]: https://getcomposer.org/
 [2]: https://semver.org/

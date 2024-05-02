@@ -20,6 +20,19 @@ defined('TYPO3_MODE') || die();
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
 );
 
+// Configure plugin - download list
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+    'Slub.SlubWebProfile',
+    'DownloadList',
+    [
+        'Download' => 'list'
+    ],
+    [
+        'Download' => 'list'
+    ],
+    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
+);
+
 // Configure plugin - event list
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
     'Slub.SlubWebProfile',
@@ -218,6 +231,7 @@ foreach ([
     'wizard-loanhistory' => 'Wizard/loan-history',
     'wizard-bookmarklist' => 'Wizard/bookmark-list',
     'wizard-dashboard' => 'Wizard/dashboard',
+    'wizard-downloadlist' => 'Wizard/download-list',
     'wizard-eventfilter' => 'Wizard/event-filter',
     'wizard-eventlist' => 'Wizard/event-list',
     'wizard-messagelist' => 'Wizard/message-list',

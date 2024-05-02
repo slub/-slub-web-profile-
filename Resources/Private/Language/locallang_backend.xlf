@@ -14,6 +14,13 @@
 				<source>Navigation Subtitle</source>
 			</trans-unit>
 
+			<trans-unit id="contentElement.downloadlist.title" resname="contentElement.downloadlist.title">
+				<source>Download list</source>
+			</trans-unit>
+			<trans-unit id="contentElement.downloadlist.description" resname="contentElement.downloadlist.description">
+				<source>List of files with all user data</source>
+			</trans-unit>
+
 			<trans-unit id="contentElement.dashboard.title" resname="contentElement.dashboard.title">
 				<source>Dashboard</source>
 			</trans-unit>

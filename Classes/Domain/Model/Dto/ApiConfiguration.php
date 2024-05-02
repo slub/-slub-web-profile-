@@ -28,7 +28,8 @@ class ApiConfiguration
     public const PLACEHOLDER = [
         'userId' => '###USER_ID###',
         'userCategory' => '###USER_CATEGORY###',
-        'pageCurrent' => '###PAGE_CURRENT###'
+        'pageCurrent' => '###PAGE_CURRENT###',
+        'fileFormat' => '###FILE_FORMAT###'
     ];
 
     /**
@@ -75,6 +76,11 @@ class ApiConfiguration
      * @var string
      */
     protected $loanHistoryUri;
+
+    /**
+     * @var string
+     */
+    protected $downloadUri;
 
     /**
      * @var string
@@ -151,6 +157,7 @@ class ApiConfiguration
         $this->setLoanCurrentUri($domain . $paths['loanCurrent']);
         $this->setLoanCurrentRenewUri($domain . $paths['loanCurrentRenew']);
         $this->setLoanHistoryUri($domain . $paths['loanHistory']);
+        $this->setDownloadUri($domain . $paths['download']);
         $this->setEventListUri($domain . $paths['eventList'][$languageUid]);
         $this->setMessageListUri($domain . $paths['messageList'][$languageUid]);
         $this->setUserAccountDetailUri($domain . $paths['userAccountDetail'][$languageUid]);
@@ -305,6 +312,22 @@ class ApiConfiguration
     public function setLoanHistoryUri(string $loanHistoryUri = ''): void
     {
         $this->loanHistoryUri = $loanHistoryUri;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDownloadUri(): string
+    {
+        return $this->downloadUri;
+    }
+
+    /**
+     * @param string $downloadUri
+     */
+    public function setDownloadUri(string $downloadUri = ''): void
+    {
+        $this->downloadUri = $downloadUri;
     }
 
     /**
@@ -481,6 +504,21 @@ class ApiConfiguration
                 self::PLACEHOLDER['userCategory'],
                 $user['account']['X_category'],
                 $this->getMessageListUri()
+            )
+        );
+    }
+
+    /**
+     * Download file format
+     * @param string $fileFormat
+     */
+    public function updateDownloadPath(string $fileFormat): void
+    {
+        $this->setDownloadUri(
+            str_replace(
+                self::PLACEHOLDER['fileFormat'],
+                $fileFormat,
+                $this->getDownloadUri()
             )
         );
     }

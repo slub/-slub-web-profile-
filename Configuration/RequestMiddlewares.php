@@ -38,5 +38,14 @@ return [
                 'typo3/cms-frontend/shortcut-and-mountpoint-redirect',
             ],
         ],
+        'slub/slub-web-profile/user-download-data' => [
+            'target' => \Slub\SlubWebProfile\Middleware\UserDownloadData::class,
+            'before' => [
+                'typo3/cms-frontend/content-length-header',
+            ],
+            'after' => [
+                'typo3/cms-frontend/shortcut-and-mountpoint-redirect',
+            ],
+        ],
     ],
 ];

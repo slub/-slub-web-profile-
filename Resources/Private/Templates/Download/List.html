@@ -1,0 +1,25 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+<!-- Templates/Download/List.html -->
+
+<f:section name="Default">
+    <f:if condition="{fileFormats -> f:count()} == 0">
+        <f:then>
+            <p>Error in configuration. No file formats given.</p>
+        </f:then>
+        <f:else>
+            <!--TYPO3SEARCH_end-->
+            <ul>
+                <f:for as="fileFomat" each="{fileFormats}">
+                    <li>
+                        <a href="/?tx_slubwebprofile_downloaddata[fileFormat]={fileFomat}">{fileFomat}</a>
+                    </li>
+                </f:for>
+            </ul>
+            <!--TYPO3SEARCH_begin-->
+        </f:else>
+    </f:if>
+</f:section>
+</html>
