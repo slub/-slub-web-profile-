@@ -15,14 +15,13 @@
                     <link 
                         rel="stylesheet" type="text/css" media="all"
                         href="/typo3conf/ext/slub_web_profile/Resources/Public/Css/modal.css" />
-                    <script 
-                        type="module"
-                        src="/typo3conf/ext/slub_web_profile/Resources/Public/JavaScript/Vendors/bootstrap/modal.js"></script>
                     <link
                         rel="stylesheet"
                         type="text/css"
                         media="all"
                         href="/typo3conf/ext/slub_web_profile/Resources/Public/Css/tableview.css"/>
+                    <script type="module"
+                        src="/typo3conf/ext/slub_web_profile/Resources/Public/JavaScript/Vendors/Bootstrap/modal.js"></script>
                     <script
                         type="module"
                         src="/typo3conf/ext/slub_web_profile/Resources/Public/JavaScript/loan-current.js"></script>
@@ -59,9 +58,12 @@
                         </table>
                         <ul class="js-loan-dropdown__table tableview-action" aria-labelledby="dropdownTable" role="listbox" aria-hidden="false">
                             <li>
+                                <button id="js-loan-current-reset" class="btn btn-action" type="button" disabled>
+                                    <f:translate key="loan.btnsubmit.reset" />
+                                </button>
+                            </li>
+                            <li>
                                 <button id="js-loan-current-select-all" class="btn btn-action" type="button"
-                                        data-select="{f:translate(id: 'loan.btnsubmit.mark')}"
-                                        data-deselect="{f:translate(id: 'loan.btnsubmit.reset')}"
                                         data-bs-toggle="modal" data-bs-target="#renewLoanConfirmAll">
                                     <f:translate key="loan.btnsubmit.mark" />
                                 </button>

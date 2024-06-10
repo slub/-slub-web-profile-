@@ -12,10 +12,10 @@ if (listElement) {
   let listSelectAll = await import('./Service/LoanCurrent/select-all.js');
   let btnSubmit = await import('./Service/LoanCurrent/btn-submit.js');
   let listToggleTable = await import('./Service/LoanCurrent/toggle-table.js');
-  let hearModalAction = await import('./Service/LoanCurrent/hear-modal.js');
+  let renewalModalAction = await import('./Service/LoanCurrent/renewal-notice.js');
 
   listSelectAll.listenButton();
   btnSubmit.listenCheckItems();
   listToggleTable.listenDropdown();
-  hearModalAction.confirmModal();
+  renewalModalAction.renewalNotice();
 }
