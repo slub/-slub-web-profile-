@@ -1,22 +1,86 @@
 # customsubcategory=76573001_Storage=Storage
 # customsubcategory=76573002_Api=API
+# customsubcategory=76573003_Uri=URI
+# customsubcategory=76573004_Download=Download
 
 plugin.tx_slubwebprofile {
   settings {
     # cat=SLUB Profile Service/76573001_Storage/100; type=string; label=Default storage PID
     storagePid = 0
 
+    # cat=SLUB Profile Service/76573003_Uri/100; type=string; label=Uri for catalogue
+    uri.catalogue = https://katalog.slub-dresden.de
+
+    download {
+      # cat=SLUB Profile Service/76573004_Download/100; type=string; label=Download file format
+      fileFormat = json, csv, html
+
+      # cat=SLUB Profile Service/76573004_Download/100; type=string; label=URL to request DSVGO compliant user data
+      dsvgoUrl = https://libero.slub-dresden.de/csp/user/dsgvo01.csp?patronid=%s&format=%s
+    }
+
     api {
       path {
+        # cat=SLUB Profile Service/76573002_Api/100; type=string; label=Path for booked list
+        bookedList = /raumbuchungen/###USER_ID###
+
+        # cat=SLUB Profile Service/76573002_Api/102; type=string; label=Path for bookmark list
+        bookmarkList = /merkliste/###USER_ID###
+
+        # cat=SLUB Profile Service/76573002_Api/104; type=string; label=Path for currently reserved media
+        reserveCurrent = /benutzer/vormerkung/aktuell/###USER_ID###
+         # cat=SLUB Profile Service/76573002_Api/105; type=string; label=Path for delete reserved media
+        reserveCurrentDelete = /benutzer/vormerkung/loeschen/###USER_ID###
+        # cat=SLUB Profile Service/76573002_Api/106; type=string; label=Path for reserved, past media
+        reserveHistory = /benutzer/vormerkung/historie/###USER_ID###/page/###PAGE_CURRENT###
+        # cat=SLUB Profile Service/76573002_Api/107; type=string; label=Path for reserved, hold
+        reserveHold = /benutzer/vormerkung/abholbereit/###USER_ID###
+
+        # cat=SLUB Profile Service/76573002_Api/107; type=string; label=Path for media ready for collection
+        loanCurrent = /benutzer/ausleihe/aktuell/###USER_ID###
+        # cat=SLUB Profile Service/76573002_Api/108; type=string; label=Path for renew media ready
+        loanCurrentRenew = /benutzer/ausleihe/erneuern/###USER_ID###
+        # cat=SLUB Profile Service/76573002_Api/109; type=string; label=Path for loaned, past media
+        loanHistory = /benutzer/ausleihe/historie/###USER_ID###/page/###PAGE_CURRENT###
+
+        # cat=SLUB Profile Service/76573002_Api/118; type=string; label=Path for download
+        download = /benutzer/download/###USER_ID###?tx_slubprofileaccount_userdatadownload[fileFormat]=###FILE_FORMAT###
+
         eventList {
-          # cat=SLUB Profile Service/76573002_Api/100; type=string; label=Path for event list (sys_language_uid = 0)
-          0 = /veranstaltungen/benutzer/
-          # cat=SLUB Profile Service/76573002_Api/101; type=string; label=Path for event list (sys_language_uid = 1)
-          1 = /en/events/user/
+          # cat=SLUB Profile Service/76573002_Api/110; type=string; label=Path for event list (sys_language_uid = 0)
+          0 = /veranstaltungen/benutzer/###USER_ID###
+          # cat=SLUB Profile Service/76573002_Api/111; type=string; label=Path for event list (sys_language_uid = 1)
+          1 = /en/events/user/###USER_ID###
         }
 
-        # cat=SLUB Profile Service/76573002_Api/100; type=string; label=Path for user detail
-        userDetail = /benutzer/
+        messageList {
+          # cat=SLUB Profile Service/76573002_Api/113; type=string; label=Path for message list (sys_language_uid = 0)
+          0 = /meldungen/###USER_CATEGORY###
+          # cat=SLUB Profile Service/76573002_Api/114; type=string; label=Path for message list (sys_language_uid = 1)
+          1 = /en/messages/###USER_CATEGORY###
+        }
+
+        userAccountDetail {
+          # cat=SLUB Profile Service/76573002_Api/116; type=string; label=Path for user account detail (contains user account / sys_language_uid = 0)
+          0 = /benutzer/###USER_ID###
+          # cat=SLUB Profile Service/76573002_Api/117; type=string; label=Path for user account detail (contains user account / sys_language_uid = 1)
+          1 = /en/user/###USER_ID###
+        }
+
+        # cat=SLUB Profile Service/76573002_Api/120; type=string; label=Path for user account update (contains user account)
+        userAccountUpdate = /benutzer/aktualisieren/###USER_ID###
+        # cat=SLUB Profile Service/76573002_Api/121; type=string; label=Path for user pin update (contains user pin)
+        userPinUpdate = /benutzer/pin/aktualisieren/###USER_ID###
+        # cat=SLUB Profile Service/76573002_Api/122; type=string; label=Path for user password update (contains user password)
+        userPasswordUpdate = /benutzer/passwort/aktualisieren/###USER_ID###
+        # cat=SLUB Profile Service/76573002_Api/123; type=string; label=Path for user dashboard detail (contains user dashboard)
+        userDashboardDetail = /benutzer/dashboard/###USER_ID###
+        # cat=SLUB Profile Service/76573002_Api/124; type=string; label=Path for user dashboard update (contains user dashboard)
+        userDashboardUpdate = /benutzer/dashboard/aktualisieren/###USER_ID###
+        # cat=SLUB Profile Service/76573002_Api/125; type=string; label=Path for user search query detail (contains user search query)
+        userSearchQueryDetail = /benutzer/suchanfrage/###USER_ID###
+        # cat=SLUB Profile Service/76573002_Api/126; type=string; label=Path for user search query update (contains user search query)
+        userSearchQueryUpdate = /benutzer/suchanfrage/aktualisieren/###USER_ID###
       }
     }
   }

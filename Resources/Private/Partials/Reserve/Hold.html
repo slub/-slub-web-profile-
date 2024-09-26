@@ -1,0 +1,95 @@
+{namespace slub=Slub\SlubWebProfile\ViewHelpers}
+
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+<f:comment>Partials/Reserve/Hold.html</f:comment>
+
+<tr class="reservetable__item tableview-item">
+	<th scope="row">
+		<span class="tableview-item--mobileheader tableview-item--counting__mobile"><f:translate key="reserveHistory.table.caption" />&nbsp;#{iterator.cycle}</span>
+		<span class="tableview-item--counting">{iterator.cycle}</span>
+	</th>
+	<td>
+		<span class="tableview-item--mobileheader"><f:translate key="reserve.label.barcode" /></span>
+
+        <f:if condition="{reserveItem.X_medientyp} == 'FL'">
+            <f:then>
+                {reserveItem.label}
+                <br />
+                <slub:ILLRequestHoldInfo barcode="{reserveItem.label}"/>
+            </f:then>
+            <f:else>
+                <f:link.typolink parameter="{settings.uri.catalogue}/bc/{reserveItem.label}" title="{reserveItem.about}">
+                    {reserveItem.label}
+                </f:link.typolink>
+            </f:else>
+        </f:if>
+	</td>
+	<td>
+		<span class="tableview-item--mobileheader"><f:translate key="reserve.label.title" /></span>
+        <slub:format.charRemove chars="¬">{reserveItem.about}</slub:format.charRemove>
+
+        <f:if condition="{reserveItem.X_medientyp} == 'FL' && {reserveItem.X_ill_request_id}">
+            <br>
+            (<f:translate key="general.flInfo" />: {reserveItem.X_ill_request_id})
+        </f:if>
+	</td>
+	<td>
+		<span class="tableview-item--mobileheader"><f:translate key="reserve.label.author" /></span>
+		<f:if condition="{reserveItem.X_author}">
+			<f:then>
+				<f:for each="{reserveItem.X_author}" as="author" iteration="authorIteration"><f:if condition="{authorIteration.index} > 0}">,<br /></f:if><slub:format.charRemove chars="¬">{author}</slub:format.charRemove></f:for>
+			</f:then>
+			<f:else>—</f:else>
+		</f:if>
+	</td>
+	<td>
+		<span class="tableview-item--mobileheader"><f:translate key="reserve.label.received-on" /></span>
+		<time datetime="{f:format.date(date:reserveItem.X_date_noticed, format:'Y-m-d')}">
+			<f:format.date format="%d. %B %Y">{reserveItem.X_date_noticed}</f:format.date>
+		</time>
+	</td>
+    <td>
+        <span class="tableview-item--mobileheader"><f:translate key="reserve.label.pickup-point" /></span>
+
+        <f:if condition="{reserveItem.X_provided} == 1">
+            <f:then>
+                <slub:link.get3DModelLink pickupdesc="{reserveItem.X_pickup_desc}" mediatype="{reserveItem.X_medientyp}"/>
+
+                <f:if condition="{reserveItem.X_medientyp} == 'FL'">
+                    <f:then>
+                        <f:if condition="{reserveItem.X_ill_duedate}">
+                            <f:then>
+                                <f:if condition="{reserveItem.X_ill_duedate} != '1840-12-31'">
+                                    <f:then>
+                                        <f:variable name="formatedDate" value="{f:format.date(format: '%d. %B %Y', date: reserveItem.X_ill_duedate)}"/>
+
+                                        <br />
+                                        <f:translate key="general.flDueDate1" arguments="{0: formatedDate}"/>
+                                    </f:then>
+                                </f:if>
+                            </f:then>
+                            <f:else>
+                                <br />
+                                <f:translate key="general.flDueDate2" />
+                            </f:else>
+                        </f:if>
+                    </f:then>
+                </f:if>
+            </f:then>
+            <f:else>
+                <f:if condition="{reserveItem.X_medientyp} == 'FL'">
+                    <f:then>
+                        <slub:link.get3DModelLink pickupdesc="{f:translate(key: 'general.flPickup')}" mediatype="{reserveItem.X_medientyp}"/>
+                    </f:then>
+                    <f:else>
+                        <f:translate key="general.flProgress" />
+                    </f:else>
+                </f:if>
+            </f:else>
+        </f:if>
+    </td>
+</tr>
+
+</html>

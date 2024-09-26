@@ -1,0 +1,55 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:comment>Partials/Reserve/Status.html</f:comment>
+
+<link rel="stylesheet" type="text/css" media="all"
+      href="/typo3conf/ext/slub_web_profile/Resources/Public/Css/api-message.css" />
+    
+<f:variable name="barcodeCount200" value="0" />
+<f:variable name="barcodeCount400" value="0" />
+
+<f:for each="{status}" as="barcodeStatus">
+    <f:switch expression="{barcodeStatus.code}">
+        <f:case value="200">
+            <f:if condition="{barcodeCount200} == 0">
+                <f:then>
+                    <f:variable name="barcodeCount200" value="1" />
+                </f:then>
+                <f:else>
+                    <f:variable name="barcodeCount200" value="2" />
+                </f:else>
+            </f:if>
+        </f:case>
+        <f:case value="400">
+            <f:if condition="{barcodeCount400} == 0">
+                <f:then>
+                    <f:variable name="barcodeCount400" value="1" />
+                </f:then>
+                <f:else>
+                    <f:variable name="barcodeCount400" value="2" />
+                </f:else>
+            </f:if>
+        </f:case>
+    </f:switch>
+</f:for>
+
+
+<f:if condition="{barcodeCount200} == 1">
+    <f:then>
+        <div class="api-inline-message-status api-message-status--successful">
+            {f:translate(key: 'reserveCurrent.status.success')}
+        </div>
+    </f:then>
+    <f:else if="{barcodeCount200} == 2">
+        <div class="api-inline-message-status api-message-status--successful">
+            {f:translate(key: 'reserveCurrent.status.successAll')}
+        </div>
+    </f:else>
+</f:if>
+
+<f:if condition="{barcodeCount400} > 0">
+    <div class="api-inline-message-status api-message-status--error">
+        {f:translate(key: 'reserveCurrent.status.error.badRequest')}
+    </div>
+</f:if>
+
+</html>

@@ -1,0 +1,43 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+<f:comment>Partials/Loan/Widget.html</f:comment>
+
+<f:if condition="{iterator.index} < {settings.limit}">
+	<li {f:if(condition: '{f:format.date(date: \'now\', format: \'Y-m-d\')} > {f:format.date(date:loanItem.X_date_due, format:\'Y-m-d\')}', then: 'class="loanwidget__overdue"')}>
+		<f:comment>Due date</f:comment>
+		<div class="loanwidget__date timedata__date timedata__date-prio">
+			<time class="timedata__date-day" datetime="{f:format.date(date:loanItem.X_date_due, format:'Y-m-d')}">
+				<f:format.date format="d">{loanItem.X_date_due}</f:format.date>
+			</time>
+
+			<div class="widgetlist__column--right">
+				<time class="timedata__date-month" datetime="{f:format.date(date:loanItem.X_date_due, format:'Y-m-d')}">
+					<f:format.date format="F Y">{loanItem.X_date_due}</f:format.date>
+				</time>
+				<span class="loanwidget__time timedata__time">
+					<time datetime="{f:format.date(date:loanItem.X_date_due, format:'Y-m-d')}">
+						<f:format.date format="H:i">{loanItem.X_date_due}</f:format.date> <f:translate key="general.oClock"/>
+					</time>
+				</span>
+			</div>
+			<f:comment>Overdue Icon</f:comment>
+			<f:if condition="{f:format.date(date: 'now', format: 'Y-m-d')} > {f:format.date(date:loanItem.X_date_due, format:'Y-m-d')}">
+				<span class="loanwidget__overdue-icon"></span>
+			</f:if>
+		</div>
+
+		<f:comment>Title</f:comment>
+		<f:link.typolink
+			parameter="/bc/{loanItem.X_barcode}"
+			title="{loanItem.about}"
+			class="loanwidget__title widget__title">
+				<f:comment>Overdue Label</f:comment>
+				<f:if condition="{f:format.date(date: 'now', format: 'Y-m-d')} > {f:format.date(date:loanItem.startDateTime.format, format:'Y-m-d')}">
+					<span class="loanwidget__overdue-label"><f:translate key="loan.widget.overdue.label"/></span>
+				</f:if>
+				{loanItem.about}
+		</f:link.typolink>
+	</li>
+</f:if>
+
+</html>

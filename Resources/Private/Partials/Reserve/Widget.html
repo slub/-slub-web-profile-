@@ -1,0 +1,31 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+<f:comment>Partials/Reserve/Widget.html</f:comment>
+
+<f:if condition="{iterator.index} < {settings.limit}">
+	<li>
+		<f:comment>Date</f:comment>
+		<div class="reservewidget__date timedata__date">
+			<time datetime="{f:format.date(date:reserveItem.X_date_reserved, format:'Y-m-d')}">
+				<f:format.date format="d F Y">{reserveItem.X_date_reserved}</f:format.date>
+			</time>
+		</div>
+
+		<f:comment>Header</f:comment>
+		<f:link.typolink
+			parameter="/bc/{reserveItem.label}"
+			title="{reserveItem.about}"
+			class="reservewidget__title widget__title">
+				{reserveItem.about}
+		</f:link.typolink>
+
+		<f:comment>Position in the prebooking list</f:comment>
+		<f:if condition="{reserveItem.X_queue_number}">
+			<div>
+				<f:translate key="reserve.widget.position.label" /> {reserveItem.X_queue_number}
+			</div>
+		</f:if>
+	</li>
+</f:if>
+
+</html>

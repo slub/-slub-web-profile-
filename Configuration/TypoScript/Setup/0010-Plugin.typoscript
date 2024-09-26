@@ -4,21 +4,56 @@ plugin.tx_slubwebprofile {
     throwPageNotFoundExceptionIfActionCantBeResolved = 1
   }
 
-  features {
-    skipDefaultArguments = 1
-  }
+  features.skipDefaultArguments = 1
 
   settings {
     storagePid = {$plugin.tx_slubwebprofile.settings.storagePid}
 
+    uri.catalogue = {$plugin.tx_slubwebprofile.settings.uri.catalogue}
+
+    download {
+      fileFormat = {$plugin.tx_slubwebprofile.settings.download.fileFormat}
+      dsvgoUrl = {$plugin.tx_slubwebprofile.settings.download.dsvgoUrl}
+    }
+
     api {
       path {
+        bookedList = {$plugin.tx_slubwebprofile.settings.api.path.bookedList}
+        bookmarkList = {$plugin.tx_slubwebprofile.settings.api.path.bookmarkList}
+
+        reserveCurrent = {$plugin.tx_slubwebprofile.settings.api.path.reserveCurrent}
+        reserveCurrentDelete = {$plugin.tx_slubwebprofile.settings.api.path.reserveCurrentDelete}
+        reserveHistory = {$plugin.tx_slubwebprofile.settings.api.path.reserveHistory}
+        reserveHold = {$plugin.tx_slubwebprofile.settings.api.path.reserveHold}
+
+        loanCurrent = {$plugin.tx_slubwebprofile.settings.api.path.loanCurrent}
+        loanCurrentRenew = {$plugin.tx_slubwebprofile.settings.api.path.loanCurrentRenew}
+        loanHistory = {$plugin.tx_slubwebprofile.settings.api.path.loanHistory}
+
+        download = {$plugin.tx_slubwebprofile.settings.api.path.download}
+
         eventList {
           0 = {$plugin.tx_slubwebprofile.settings.api.path.eventList.0}
           1 = {$plugin.tx_slubwebprofile.settings.api.path.eventList.1}
         }
 
-        userDetail = {$plugin.tx_slubwebprofile.settings.api.path.userDetail}
+        messageList {
+          0 = {$plugin.tx_slubwebprofile.settings.api.path.messageList.0}
+          1 = {$plugin.tx_slubwebprofile.settings.api.path.messageList.1}
+        }
+
+        userAccountDetail {
+          0 = {$plugin.tx_slubwebprofile.settings.api.path.userAccountDetail.0}
+          1 = {$plugin.tx_slubwebprofile.settings.api.path.userAccountDetail.1}
+        }
+
+        userAccountUpdate = {$plugin.tx_slubwebprofile.settings.api.path.userAccountUpdate}
+        userPinUpdate = {$plugin.tx_slubwebprofile.settings.api.path.userPinUpdate}
+        userPasswordUpdate = {$plugin.tx_slubwebprofile.settings.api.path.userPasswordUpdate}
+        userDashboardDetail = {$plugin.tx_slubwebprofile.settings.api.path.userDashboardDetail}
+        userDashboardUpdate = {$plugin.tx_slubwebprofile.settings.api.path.userDashboardUpdate}
+        userSearchQueryDetail = {$plugin.tx_slubwebprofile.settings.api.path.userSearchQueryDetail}
+        userSearchQueryUpdate = {$plugin.tx_slubwebprofile.settings.api.path.userSearchQueryUpdate}
       }
     }
   }

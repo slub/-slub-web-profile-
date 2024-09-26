@@ -8,6 +8,24 @@
 				<target>Web Profil</target>
 			</trans-unit>
 
+			<trans-unit id="pages.tx_slubwebprofile_profilmenu" resname="pages.tx_slubwebprofile_profilmenu">
+				<source>Profil Menu</source>
+				<target>Profil Menu</target>
+			</trans-unit>
+			<trans-unit id="pages.tx_slubwebprofile_navigationSubtitle" resname="pages.tx_slubwebprofile_navigationSubtitle">
+				<source>Navigation Subtitle</source>
+				<target>Navigation Untertitel</target>
+			</trans-unit>
+
+			<trans-unit id="contentElement.downloadlist.title" resname="contentElement.downloadlist.title">
+				<source>Download list</source>
+				<target>Downloadliste</target>
+			</trans-unit>
+			<trans-unit id="contentElement.downloadlist.description" resname="contentElement.downloadlist.description">
+				<source>List of files with all user data</source>
+				<target>Liste von Dateien mit allen Benutzerdaten</target>
+			</trans-unit>
+
 			<trans-unit id="contentElement.dashboard.title" resname="contentElement.dashboard.title">
 				<source>Dashboard</source>
 				<target>Pinnwand</target>
@@ -44,11 +62,74 @@
 				<target>Auflistung von ausgeliehenen Medien eines eingeloggten Benutzers.</target>
 			</trans-unit>
 
+			<trans-unit id="contentElement.reservecurrent.title" resname="contentElement.reservecurrent.title">
+				<source>Reserved media</source>
+				<target>Vorgemerkte Medien</target>
+			</trans-unit>
+			<trans-unit id="contentElement.reservecurrent.description" resname="contentElement.reservecurrent.description">
+				<source>Fetch reserved media of a logged-in user.</source>
+				<target>Vorgemerkte Medien eines eingeloggten Benutzers holen.</target>
+			</trans-unit>
+
+			<trans-unit id="contentElement.reservehistory.title" resname="contentElement.reservehistory.title">
+				<source>History: Reservations</source>
+				<target>Historie: Vormerkungen</target>
+			</trans-unit>
+			<trans-unit id="contentElement.reservehistory.description" resname="contentElement.reservehistory.description">
+				<source>History of reserved media</source>
+				<target>Historie vorgemerkter Medien</target>
+			</trans-unit>
+
+			<trans-unit id="contentElement.reservehold.title" resname="contentElement.reservehold.title">
+				<source>Hold: Reservations</source>
+				<target>Abholbereit: Vormerkungen</target>
+			</trans-unit>
+			<trans-unit id="contentElement.reservehold.description" resname="contentElement.reservehold.description">
+				<source>Hold reserved media</source>
+				<target>Abholbereite Vormerkungen</target>
+			</trans-unit>
+
+			<trans-unit id="contentElement.loancurrent.title" resname="contentElement.loancurrent.title">
+				<source>Loaned media</source>
+				<target>Ausgeliehene Medien</target>
+			</trans-unit>
+			<trans-unit id="contentElement.loancurrent.description" resname="contentElement.loancurrent.description">
+				<source>Loaned media of a logged-in user.</source>
+				<target>Ausgeliehene Medien eines eingeloggten Benutzers holen.</target>
+			</trans-unit>
+
+			<trans-unit id="contentElement.loanhistory.title" resname="contentElement.loanhistory.title">
+				<source>History: Loans</source>
+				<target>Historie: Ausleihen</target>
+			</trans-unit>
+			<trans-unit id="contentElement.loanhistory.description" resname="contentElement.loanhistory.description">
+				<source>History of loaned media</source>
+				<target>Historie ausgeliehener Medien</target>
+			</trans-unit>
+
+			<trans-unit id="contentElement.bookedlist.title" resname="contentElement.bookedlist.title">
+				<source>Room bookings</source>
+				<target>Raumbuchungen</target>
+			</trans-unit>
+			<trans-unit id="contentElement.bookedlist.description" resname="contentElement.bookedlist.description">
+				<source>Booked rooms of a logged in user.</source>
+				<target>Raumbuchungen eines eingeloggten Benutzers.</target>
+			</trans-unit>
+
 			<trans-unit id="contentElement.bookmarklist.title" resname="contentElement.bookmarklist.title">
-				<source>Bookmark search terms</source>
-				<target>Lesezeichen Suchbegriffe</target>
+				<source>Bookmark</source>
+				<target>Merkliste</target>
 			</trans-unit>
 			<trans-unit id="contentElement.bookmarklist.description" resname="contentElement.bookmarklist.description">
+				<source>Bookmark of a logged in user.</source>
+				<target>Merkliste eines eingeloggten Benutzers.</target>
+			</trans-unit>
+
+			<trans-unit id="contentElement.searchquerylist.title" resname="contentElement.searchquerylist.title">
+				<source>Search query list</source>
+				<target>Liste mit Suchanfragen</target>
+			</trans-unit>
+			<trans-unit id="contentElement.searchquerylist.description" resname="contentElement.searchquerylist.description">
 				<source>Listing of the last search queries of a logged-in user.</source>
 				<target>Auflistung der letzten Suchanfragen eines eingeloggten Benutzers.</target>
 			</trans-unit>
@@ -62,6 +143,33 @@
 				<target>Detailinformationen zu einem eingeloggten Benutzer.</target>
 			</trans-unit>
 
+			<trans-unit id="contentElement.messagelist.title" resname="contentElement.messagelist.title">
+				<source>Message list</source>
+				<target>Meldungsliste</target>
+			</trans-unit>
+			<trans-unit id="contentElement.messagelist.description" resname="contentElement.messagelist.description">
+				<source>List of messages depends on the user group.</source>
+				<target>Auflistung von Meldungen in Abhängigkeit der Benutzergruppe.</target>
+			</trans-unit>
+
+			<trans-unit id="contentElement.sidebarmenu.title" resname="contentElement.sidebarmenu.title">
+				<source>Sidebar menu</source>
+				<target>Seitenmenü</target>
+			</trans-unit>
+			<trans-unit id="contentElement.sidebarmenu.description" resname="contentElement.sidebarmenu.description">
+				<source>Sticky menu of suselected pages.</source>
+				<target>Sticky Menü der ausgewählten Seiten.</target>
+			</trans-unit>
+
+			<trans-unit id="contentElement.accountform.title" resname="contentElement.accountform.title">
+				<source>Account form</source>
+				<target>Konto-Formular</target>
+			</trans-unit>
+			<trans-unit id="contentElement.accountform.description" resname="contentElement.accountform.description">
+				<source>Account form for profile settings.</source>
+				<target>Konto-Formular für Profileinstellungen.</target>
+			</trans-unit>
+
 			<trans-unit id="extensionConfiguration.apiDomain" resname="extensionConfiguration.api.domain">
 				<source>Domain: The domain has to begin with "https://" and no trailing slash.</source>
 				<target>Domain: Die Domain muss mit "https://" anfangen und hat keinen Schrägstrich am Ende.</target>
@@ -72,8 +180,24 @@
 				<target>SLUB Web Profil</target>
 			</trans-unit>
 			<trans-unit id="backendLayout.webProfile.description" resname="backendLayout.webProfile.description">
-				<source>One column and content left</source>
-				<target>Eine Spalte und links ausgerichtetem Inhalt</target>
+				<source>Two columns (colpos 1,2) with large content column (colpos 0)</source>
+				<target>Zwei Spalten (colpos 1,2) mit großer Contentspalte (colpos 0)</target>
+			</trans-unit>
+			<trans-unit id="backendLayout.accountLayout.title" resname="backendLayout.accountLayout.title">
+				<source>SLUB Account Layout</source>
+				<target>SLUB Konto-Layout</target>
+			</trans-unit>
+			<trans-unit id="backendLayout.accountLayout.description" resname="backendLayout.accountLayout.description">
+				<source>Two columns each for header (colpos 1,2) and content area (colpos 0,3)</source>
+				<target>Je zwei Spalten für Header (colpos 1,2) und Contentbereich (colpos 0,3)</target>
+			</trans-unit>
+			<trans-unit id="backendLayout.column.leftcol" resname="backendLayout.column.leftcol">
+				<source>Left</source>
+				<target>Links</target>
+			</trans-unit>
+			<trans-unit id="backendLayout.column.rightcol" resname="backendLayout.column.rightcol">
+				<source>Right (slide)</source>
+				<target>Rechts (unterverbt)</target>
 			</trans-unit>
 			<trans-unit id="backendLayout.column.content" resname="backendLayout.column.content">
 				<source>Content</source>
@@ -82,6 +206,10 @@
 			<trans-unit id="backendLayout.column.inlineElements" resname="backendLayout.column.inlineElements">
 				<source>Additional content</source>
 				<target>Zusätzlicher Inhalt</target>
+			</trans-unit>
+			<trans-unit id="backendLayout.column.sidebar" resname="backendLayout.column.sidebar">
+				<source>Sidebar</source>
+				<target>Sidebar</target>
 			</trans-unit>
 		</body>
 	</file>

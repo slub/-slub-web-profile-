@@ -3,19 +3,55 @@
 	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2012-11-01T14:46:01Z"  product-name="slub_web_profile">
 		<header/>
 		<body>
+
+			<!--
+				General
+			-->
+
 			<trans-unit id="general.oClock" resname="general.oClock">
 				<source>o'clock</source>
 				<target>Uhr</target>
 			</trans-unit>
 			<trans-unit id="general.personalise" resname="general.personalise">
 				<source>Personalise Dashboard</source>
-				<target>Dashboard personalisieren </target>
+				<target>Dashboard personalisieren</target>
+			</trans-unit>
+			<trans-unit id="general.personalise.close" resname="general.personalise.close">
+				<source>End personalisation</source>
+				<target>Personalisierung beenden</target>
+			</trans-unit>
+			<trans-unit id="general.personalise.helptext" resname="general.personalise.helptext">
+				<source><![CDATA[More <a href="" title="tips and info on the dashboard">tips and info</a> on the dashboard.]]></source>
+				<target><![CDATA[Weitere <a href="" title="Tipps und Infos zum Dashboard">Tipps und Infos</a> zum Dashboard.]]></target>
+			</trans-unit>
+			<trans-unit id="general.widget.closed" resname="general.widget.closed">
+				<source>Remove this field</source>
+				<target>Dieses Feld entfernen</target>
+			</trans-unit>
+			<trans-unit id="general.flInfo" resname="general.flInfo">
+				<source>Fernleih ID/Bestellnummer</source>
+				<target>Interlibrary loan ID/ Order number</target>
+			</trans-unit>
+			<trans-unit id="general.flPickup" resname="general.flPickup">
+				<source>Central Library, service desk</source>
+				<target>Zentralbibliothek Servicetheke</target>
+			</trans-unit>
+			<trans-unit id="general.flProgress" resname="general.flProgress">
+				<source>in progress</source>
+				<target>In Bearbeitung</target>
+			</trans-unit>
+			<trans-unit id="general.flDueDate1" resname="general.flDueDate1">
+				<source>Made available until %s</source>
+				<target>Bis zum %s bereitgestellt.</target>
+			</trans-unit>
+			<trans-unit id="general.flDueDate2" resname="general.flDueDate2">
+				<source>Made available until the end of the loan period.</source>
+				<target>Bis zum Ende der Leihfrist bereitgestellt.</target>
 			</trans-unit>
 
-			<trans-unit id="eventItem.default.noEvents" resname="eventItem.default.noEvents">
-				<source>You have no subscribed events.</source>
-				<target>Sie haben keine gebuchten Veranstaltungen.</target>
-			</trans-unit>
+			<!--
+				Event
+			-->
 
 			<trans-unit id="event.filter.label" resname="event.filter.label">
 				<source>Filter by event type</source>
@@ -25,17 +61,671 @@
 				<source>All</source>
 				<target>Alle</target>
 			</trans-unit>
-			<trans-unit id="eventItem.teaser.more" resname="eventItem.teaser.more">
-				<source>More</source>
-				<target>Mehr</target>
+			<trans-unit id="event.default.empty" resname="event.default.empty">
+				<source>You have no subscribed events.</source>
+				<target>Sie haben keine gebuchten Veranstaltungen.</target>
 			</trans-unit>
-			<trans-unit id="event.teaser.noEvents" resname="event.teaser.noEvents">
-				<source>No subscribed events.</source>
-				<target>Keine gebuchten Veranstaltungen.</target>
-			</trans-unit>
-			<trans-unit id="eventItem.unsubscribe" resname="eventItem.unsubscribe">
+			<trans-unit id="event.default.unsubscribe" resname="event.default.unsubscribe">
 				<source>Unsubscribe from the event</source>
 				<target>Von Veranstaltung abmelden</target>
+			</trans-unit>
+			<trans-unit id="event.widget.more" resname="event.widget.more">
+				<source><![CDATA[<strong>All</strong> my events]]></source>
+				<target><![CDATA[<strong>Alle</strong> meine Veranstaltungen]]></target>
+			</trans-unit>
+			<trans-unit id="event.widget.today.label" resname="event.widget.today.label">
+				<source>Today!</source>
+				<target>Heute!</target>
+			</trans-unit>
+
+			<!--
+				Search query
+			-->
+
+			<trans-unit id="searchQuery.type.simple" resname="searchQuery.type.simple">
+				<source>Simple search</source>
+				<target>Einfache Suche</target>
+			</trans-unit>
+			<trans-unit id="searchQuery.type.extended" resname="searchQuery.type.extended">
+				<source>Advanced search</source>
+				<target>Erweiterte Suche</target>
+			</trans-unit>
+			<trans-unit id="searchQuery.default.table.th.title" resname="searchQuery.default.table.th.title">
+				<source>Title</source>
+				<target>Titel</target>
+			</trans-unit>
+			<trans-unit id="searchQuery.default.empty" resname="searchQuery.default.empty">
+				<source>You have no subscribed search queries.</source>
+				<target>Sie haben keine gespeicherten Suchanfragen.</target>
+			</trans-unit>
+			<trans-unit id="searchQuery.default.table.th.title" resname="searchQuery.default.table.th.title">
+				<source>Title</source>
+				<target>Titel</target>
+			</trans-unit>
+			<trans-unit id="searchQuery.default.table.th.results" resname="searchQuery.default.table.th.results">
+				<source>Hits</source>
+				<target>Treffer</target>
+			</trans-unit>
+			<trans-unit id="searchQuery.default.table.th.date" resname="searchQuery.default.table.th.date">
+				<source>Date</source>
+				<target>Datum</target>
+			</trans-unit>
+			<trans-unit id="searchQuery.default.type" resname="searchQuery.default.type">
+				<source>Type:</source>
+				<target>Typ:</target>
+			</trans-unit>
+			<trans-unit id="searchQuery.default.fields" resname="searchQuery.default.fields">
+				<source>Fields:</source>
+				<target>Felder:</target>
+			</trans-unit>
+			<trans-unit id="searchQuery.default.description" resname="searchQuery.default.description">
+				<source>Description:</source>
+				<target>Beschreibung:</target>
+			</trans-unit>
+			<trans-unit id="searchQuery.default.description.empty" resname="searchQuery.default.description.empty">
+				<source>-</source>
+				<target>-</target>
+			</trans-unit>
+			<trans-unit id="searchQuery.default.action.selectAll" resname="searchQuery.default.action.selectAll">
+				<source>Select all</source>
+				<target>Alles auswählen</target>
+			</trans-unit>
+			<trans-unit id="searchQuery.default.action.deselectAll" resname="searchQuery.default.action.deselectAll">
+				<source>Deselect all</source>
+				<target>Nichts auswählen</target>
+			</trans-unit>
+			<trans-unit id="searchQuery.default.action.export" resname="searchQuery.default.action.export">
+				<source>Export selected</source>
+				<target>Auswahl exportieren</target>
+			</trans-unit>
+			<trans-unit id="searchQuery.default.action.delete" resname="searchQuery.default.action.delete">
+				<source>Delete selected</source>
+				<target>Auswahl löschen</target>
+			</trans-unit>
+			<trans-unit id="searchQuery.widget.more" resname="searchQuery.widget.more">
+				<source><![CDATA[<strong>All</strong> searches]]></source>
+				<target><![CDATA[<strong>Alle</strong> Suchanfragen]]></target>
+			</trans-unit>
+			<trans-unit id="searchQuery.widget.result" resname="searchQuery.widget.result">
+				<source>%1$s result</source>
+				<target>%1$s Ergebnis</target>
+			</trans-unit>
+			<trans-unit id="searchQuery.widget.results" resname="searchQuery.widget.results">
+				<source>%1$s results</source>
+				<target>%1$s Ergebnisse</target>
+			</trans-unit>
+
+			<!--
+				Borrowing
+			-->
+
+			<trans-unit id="borrowing.default.empty" resname="borrowing.default.empty">
+				<source>You haven't borrowed anything yet.</source>
+				<target>Sie haben noch nix ausgeliehen.</target>
+			</trans-unit>
+			<trans-unit id="borrowing.widget.more" resname="borrowing.widget.more">
+				<source><![CDATA[<strong>More</strong> borrowing information]]></source>
+				<target><![CDATA[<strong>Mehr</strong> Ausleihinformationen]]></target>
+			</trans-unit>
+			<trans-unit id="borrowing.widget.overdue.label" resname="borrowing.widget.overdue.label">
+				<source>Overdue!</source>
+				<target>Überfällig!</target>
+			</trans-unit>
+
+			<!--
+				Reserve
+			-->
+
+			<trans-unit id="reserveCurrent.table.summary" resname="reserveCurrent.table.summary">
+				<source>Reserved media</source>
+				<target>Vorgemerkte Medien</target>
+			</trans-unit>
+			<trans-unit id="reserveCurrent.table.caption" resname="reserveCurrent.table.caption">
+				<source>Reserved media</source>
+				<target>Vorgemerkte Medien</target>
+			</trans-unit>
+			<trans-unit id="reserveCurrent.table.totalReserveItem" resname="reserveCurrent.table.totalReserveItem">
+				<source>reserved medium</source>
+				<target>vorgemerktes Medium</target>
+			</trans-unit>
+			<trans-unit id="reserveCurrent.table.totalReserveItems" resname="reserveCurrent.table.totalReserveItems">
+				<source>reserved media</source>
+				<target>vorgemerkte Medien</target>
+			</trans-unit>
+			<trans-unit id="reserveCurrent.default.empty" resname="reserveCurrent.default.empty">
+				<source>There are currently no reserved media ready for collection.</source>
+				<target>Aktuell sind keine vorgemerkte Medien abholbereit.</target>
+			</trans-unit>
+			<trans-unit id="reserveCurrent.status.success" resname="reserveCurrent.status.success">
+				<source>The change were successfully adopted.</source>
+				<target>Die Änderung wurden erfolgreich übernommen.</target>
+			</trans-unit>
+			<trans-unit id="reserveCurrent.status.successAll" resname="reserveCurrent.status.successAll">
+				<source>The changes were successfully adopted.</source>
+				<target>Die Änderungen wurden erfolgreich übernommen.</target>
+			</trans-unit>
+			<trans-unit id="reserveCurrent.status.error.badRequest" resname="reserveCurrent.status.error.badRequest">
+				<source>No connection could be established to the server.</source>
+				<target>Es konnte keine Verbindung zum Server aufgebaut werden.</target>
+			</trans-unit>
+			<trans-unit id="reserveHistory.table.summary" resname="reserveHistory.table.summary">
+				<source>Hold requests history</source>
+				<target>Vormerkhistorie</target>
+			</trans-unit>
+			<trans-unit id="reserveHistory.table.caption" resname="reserveHistory.table.caption">
+				<source>Hold requests history</source>
+				<target>Vormerkhistorie</target>
+			</trans-unit>
+			<trans-unit id="reserveHistory.default.empty" resname="reserveHistory.default.empty">
+				<source>No history of reserved media available.</source>
+				<target>Keine Historie vorgemerkter Medien vorhanden.</target>
+			</trans-unit>
+			<trans-unit id="reserve.widget.more" resname="reserve.widget.more">
+				<source><![CDATA[<strong>All</strong> orders]]></source>
+				<target><![CDATA[<strong>Alle</strong> Bestellungen]]></target>
+			</trans-unit>
+			<trans-unit id="reserve.widget.position.label" resname="reserve.widget.position.label">
+				<source>Reservation No.:</source>
+				<target>Vormerk-Nr.:</target>
+			</trans-unit>
+			<trans-unit id="reserve.label.barcode" resname="reserve.label.barcode">
+				<source>Barcode</source>
+				<target>Barcode</target>
+			</trans-unit>
+			<trans-unit id="reserve.label.title" resname="reserve.label.title">
+				<source>Title</source>
+				<target>Titel</target>
+			</trans-unit>
+			<trans-unit id="reserve.label.title-volume" resname="reserve.label.title-volume">
+				<source>Title / volume / issue number</source>
+				<target>Titel / Bandangabe</target>
+			</trans-unit>
+			<trans-unit id="reserve.label.additional-information" resname="reserve.label.additional-information">
+				<source>Additional information</source>
+				<target>Zusätzliche Informationen</target>
+			</trans-unit>
+			<trans-unit id="reserve.label.author" resname="reserve.label.author">
+				<source>Author</source>
+				<target>Verfasser</target>
+			</trans-unit>
+			<trans-unit id="reserve.label.hold-position" resname="reserve.label.hold-position">
+				<source>Hold position</source>
+				<target>Position in der Vormerkliste</target>
+			</trans-unit>
+			<trans-unit id="reserve.label.reservation-date" resname="reserve.label.reservation-date">
+				<source>Date of reservation</source>
+				<target>Datum der Vormerkung</target>
+			</trans-unit>
+			<trans-unit id="reserve.label.remove-reservation" resname="reserve.label.remove-reservation">
+				<source>Remove reservation</source>
+				<target>Vormerkung entfernen</target>
+			</trans-unit>
+			<trans-unit id="reserve.label.received-on" resname="reserve.label.received-on">
+				<source>Received on</source>
+				<target>Eingegangen am</target>
+			</trans-unit>
+			<trans-unit id="reserve.label.pickup-point" resname="reserve.label.pickup-point">
+				<source>Pickup point</source>
+				<target>Abholstelle</target>
+			</trans-unit>
+			<trans-unit id="reserve.table.reserveProgress" resname="reserve.table.reserveProgress">
+				<source>in progress…</source>
+				<target>In Bearbeitung…</target>
+			</trans-unit>
+			<trans-unit id="reserve.btnsubmit.reset" resname="reserve.btnsubmit.reset">
+				<source>Reset</source>
+				<target>Zurücksetzen</target>
+			</trans-unit>
+			<trans-unit id="reserve.btnsubmit.mark" resname="reserve.btnsubmit.mark">
+				<source>Mark all</source>
+				<target>Alle markieren</target>
+			</trans-unit>
+			<trans-unit id="reserve.btnsubmit.delete" resname="reserve.btnsubmit.delete">
+				<source>Remove</source>
+				<target>Entfernen</target>
+			</trans-unit>
+
+			<!--
+				Loan
+			-->
+
+			<trans-unit id="loanCurrent.default.empty" resname="loanCurrent.default.empty">
+				<source>No loaned media.</source>
+				<target>Keine ausgeliehene Medien.</target>
+			</trans-unit>
+			<trans-unit id="loanCurrent.table.summary" resname="loanCurrent.table.summary">
+				<source>Loaned media</source>
+				<target>Ausgeliehene Medien</target>
+			</trans-unit>
+			<trans-unit id="loanCurrent.table.caption" resname="loanCurrent.table.caption">
+				<source>Loaned media</source>
+				<target>Ausgeliehene Medien</target>
+			</trans-unit>
+			<trans-unit id="loanCurrent.table.totalLoanItem" resname="loanCurrent.table.totalLoanItem">
+				<source>Medium loaned</source>
+				<target>Medium ausgeliehen</target>
+			</trans-unit>
+			<trans-unit id="loanCurrent.table.totalLoanItems" resname="loanCurrent.table.totalLoanItems">
+				<source>Media loaned</source>
+				<target>Medien ausgeliehen</target>
+			</trans-unit>
+			<trans-unit id="loanCurrent.status.success" resname="loanCurrent.status.success">
+				<source>The change were successfully adopted.</source>
+				<target>Die Änderung wurden erfolgreich übernommen.</target>
+			</trans-unit>
+			<trans-unit id="loanCurrent.status.successAll" resname="loanCurrent.status.successAll">
+				<source>The changes were successfully adopted.</source>
+				<target>Die Änderungen wurden erfolgreich übernommen.</target>
+			</trans-unit>
+			<trans-unit id="loanCurrent.status.error.badRequest" resname="loanCurrent.status.error.badRequest">
+				<source>No connection could be established to the server.</source>
+				<target>Es konnte keine Verbindung zum Server aufgebaut werden.</target>
+			</trans-unit>
+			<trans-unit id="loanHistory.table.summary" resname="loanHistory.table.summary">
+				<source>Loaned history</source>
+				<target>Ausleihhistorie</target>
+			</trans-unit>
+			<trans-unit id="loanHistory.table.caption" resname="loanHistory.table.caption">
+				<source>Loaned history</source>
+				<target>Ausleihhistorie</target>
+			</trans-unit>
+			<trans-unit id="loanHistory.default.empty" resname="loanHistory.default.empty">
+				<source>No history of loaned media available.</source>
+				<target>Keine Historie ausgeliehener Medien vorhanden.</target>
+			</trans-unit>
+			<trans-unit id="loan.widget.more" resname="loan.widget.more">
+				<source><![CDATA[<strong>All</strong> loaned media]]></source>
+				<target><![CDATA[<strong>Alle</strong> ausgeliehene Medien]]></target>
+			</trans-unit>
+			<trans-unit id="loan.label.barcode" resname="loan.label.barcode">
+				<source>Barcode</source>
+				<target>Barcode</target>
+			</trans-unit>
+			<trans-unit id="loan.label.title" resname="loan.label.title">
+				<source>Title</source>
+				<target>Titel</target>
+			</trans-unit>
+			<trans-unit id="loan.label.title-volume" resname="loan.label.title-volume">
+				<source>Title / volume / issue number</source>
+				<target>Titel / Bandangabe</target>
+			</trans-unit>
+			<trans-unit id="loan.label.additional-information" resname="loan.label.additional-information">
+				<source>Additional information</source>
+				<target>Zusätzliche Informationen</target>
+			</trans-unit>
+			<trans-unit id="loan.label.author" resname="loan.label.author">
+				<source>Author</source>
+				<target>Verfasser</target>
+			</trans-unit>
+			<trans-unit id="loan.label.date-loan" resname="loan.label.date-loan">
+				<source>Date of loan</source>
+				<target>Datum der Ausleihe</target>
+			</trans-unit>
+			<trans-unit id="loan.label.date-due" resname="loan.label.date-due">
+				<source>Due date</source>
+				<target>Fälligkeitsdatum</target>
+			</trans-unit>
+			<trans-unit id="loan.label.date-return" resname="loan.label.date-return">
+				<source>Date of return</source>
+				<target>Datum der Rückgabe</target>
+			</trans-unit>
+			<trans-unit id="loan.label.renewal" resname="loan.label.renewal">
+				<source>Number of renewals (max. 5)</source>
+				<target>Anzahl Verlängerungen (max. 5)</target>
+			</trans-unit>
+			<trans-unit id="loan.label.renew" resname="loan.label.renew">
+				<source>Renew (from today)</source>
+				<target>Verlängern (ab heute)</target>
+			</trans-unit>
+			<trans-unit id="loan.btnsubmit.reset" resname="loan.btnsubmit.reset">
+				<source>Reset</source>
+				<target>Zurücksetzen</target>
+			</trans-unit>
+			<trans-unit id="loan.btnsubmit.mark" resname="loan.btnsubmit.mark">
+				<source>Mark all</source>
+				<target>Alle markieren</target>
+			</trans-unit>
+			<trans-unit id="loan.btnsubmit.renew" resname="loan.btnsubmit.renew">
+				<source>Renew</source>
+				<target>Verlängern</target>
+			</trans-unit>
+			<trans-unit id="loan.carrel.link" resname="loan.carrel.link">
+				<source>https://www.slub-dresden.de/en/visit/workplaces-and-workspaces/carrels/terms-of-use-for-slub-carrels</source>
+				<target>https://www.slub-dresden.de/besuchen/arbeitsplaetze-und-arbeitsraeume/carrels/regeln</target>
+			</trans-unit>
+			<trans-unit id="loan.carrel.description" resname="loan.carrel.description">
+				<source>More information about carrels</source>
+				<target>Mehr Informationen zu Carrels</target>
+			</trans-unit>
+			<trans-unit id="loan.table.FL" resname="loan.table.FL">
+				<source>Interlibrary loan</source>
+				<target>Fernleihe</target>
+			</trans-unit>
+			<trans-unit id="loan.table.FLid" resname="loan.table.FLid">
+				<source>Interlibrary loan ID/ Order number</source>
+				<target>Fernleih ID / Bestellnummer</target>
+			</trans-unit>
+			<trans-unit id="loan.table.shelfLocation" resname="loan.table.shelfLocation">
+				<source>Provided in</source>
+				<target>Bereitgestellt in</target>
+			</trans-unit>
+			<trans-unit id="loan.interlibrary.exstatus_FP" resname="loan.interlibrary.exstatus_FP">
+				<source>(Use only in the house)</source>
+				<target>(Benutzung nur im Haus)</target>
+			</trans-unit>
+			<trans-unit id="loan.interlibrary.shelfLocation.SoSa" resname="loan.interlibrary.shelfLocation.SoSa">
+				<source>Special collections reading room</source>
+				<target>Lesesaal Sondersammlungen</target>
+			</trans-unit>
+			<trans-unit id="loan.interlibrary.shelfLocation.fied1" resname="loan.interlibrary.shelfLocation.fied1">
+				<source>Medicine Branch Library</source>
+				<target>Zweigbibliothek Medizin</target>
+			</trans-unit>
+			<trans-unit id="loan.interlibrary.shelfLocation.tha1" resname="loan.interlibrary.shelfLocation.tha1">
+				<source>Branch Library Forestry</source>
+				<target>Zweigbibliothek Forstwissenschaft</target>
+			</trans-unit>
+			<trans-unit id="loan.interlibrary.shelfLocation.service" resname="loan.interlibrary.shelfLocation.service">
+				<source>Central Library, service desk</source>
+				<target>Zentralbibliothek, Servicetheke</target>
+			</trans-unit>
+			<trans-unit id="loan.renew-function.laterRenewable" resname="loan.renew-function.laterRenewable">
+				<source>Not yet renewable</source>
+				<target>Noch nicht verlängerbar</target>
+			</trans-unit>
+			<trans-unit id="loan.renew-function.askRenewable" resname="loan.renew-function.askRenewable">
+				<source>Request for an extension of the loan period by e-mail</source>
+				<target>Antrag auf Leihfristverlängerung per E-Mail</target>
+			</trans-unit>
+			<trans-unit id="loan.renew-function.notRenewableAnymore" resname="loan.renew-function.notRenewableAnymore">
+				<source>No longer renewable</source>
+				<target>Nicht mehr verlängerbar</target>
+			</trans-unit>
+			<trans-unit id="loan.renew-function.chooseRenew" resname="loan.renew-function.chooseRenew">
+				<source>Select for renewal</source>
+				<target>Zur Verlängerung auswählen</target>
+			</trans-unit>
+			<trans-unit id="loan.renew-function.isReserved" resname="loan.renew-function.isReserved">
+				<source>Item is reserved</source>
+				<target>Exemplar ist vorgemerkt</target>
+			</trans-unit>
+			<trans-unit id="loan.renew-function.notRenewable" resname="loan.renew-function.notRenewable">
+				<source>Not renewable</source>
+				<target>Nicht verlängerbar</target>
+			</trans-unit>
+			<trans-unit id="loan.renew-function.renewableAfterSubmission" resname="loan.renew-function.renewableAfterSubmission">
+				<source>Renewable after submission</source>
+				<target>Verlängerung nach Vorlage</target>
+			</trans-unit>
+			<trans-unit id="loan.renew-function.maxRenew" resname="loan.renew-function.maxRenew">
+				<source>Maximum number of renewals reached.</source>
+				<target>Maximale Anzahl an Verlängerungen erreicht.</target>
+			</trans-unit>
+			<trans-unit id="loan.renew-modal.renewConfirm" resname="loan.renew-modal.renewConfirm">
+				<source>Do you really already want to renew your items?</source>
+				<target>Wirklich bereits heute verlängern?</target>
+			</trans-unit>
+			<trans-unit id="loan.renew-modal.text1" resname="loan.renew-modal.text1">
+				<source><![CDATA[This item is <strong>not due back for another <span class="days-to-due"></span> days</strong>.<br><br>The new return date will be calculated from <strong>today</strong>.]]></source>
+				<target><![CDATA[Dieses Medium wird <strong>erst in <span class="days-to-due"></span> Tagen</strong> fällig.<br><br>Das neue Rückgabedatum wird <strong>ab dem heutigen Tag</strong> berechnet.]]></target>
+			</trans-unit>
+			<trans-unit id="loan.renew-modal.text2" resname="loan.renew-modal.text2">
+				<source><![CDATA[Some of the items marked for renewal are not due back <strong>right away</strong>.<br><br>Please note: the new return date for all renewed items will be calculated <strong>from today</strong>.]]></source>
+				<target><![CDATA[Einige der zur Verlängerung markierten Medien sind <strong>nicht unmittelbar fällig</strong>.<br><br>Bitte beachten Sie: Das neue Rückgabedatum für alle verlängerten Medien wird <strong>ab dem heutigen Tag</strong> berechnet.]]></target>
+			</trans-unit>
+			<trans-unit id="loan.renew-modal.noInfo" resname="loan.renew-modal.noInfo">
+				<source>Do not show this message any more</source>
+				<target>Hinweis nicht mehr anzeigen</target>
+			</trans-unit>
+			<trans-unit id="loan.renew-modal.cancel" resname="loan.renew-modal.cancel">
+				<source>Cancel</source>
+				<target>Abbrechen</target>
+			</trans-unit>
+			<trans-unit id="loan.renew-modal.select" resname="loan.renew-modal.select">
+				<source>Select</source>
+				<target>Auswählen</target>
+			</trans-unit>
+
+			<!--
+				Booked
+			-->
+
+			<trans-unit id="booked.default.empty" resname="booked.default.empty">
+				<source>Your booked list is empty.</source>
+				<target>Ihre Raumbuchungsliste ist leer.</target>
+			</trans-unit>
+			<trans-unit id="booked.widget.more" resname="booked.widget.more">
+				<source><![CDATA[<strong>All</strong> my room bookings]]></source>
+				<target><![CDATA[<strong>Alle</strong> meine Raumbuchungen]]></target>
+			</trans-unit>
+
+			<!--
+				Bookmark
+			-->
+
+			<trans-unit id="bookmark.default.empty" resname="bookmark.default.empty">
+				<source>Your bookmark list is empty.</source>
+				<target>Ihre Merkliste ist leer.</target>
+			</trans-unit>
+			<trans-unit id="bookmark.widget.more" resname="bookmark.widget.more">
+				<source><![CDATA[<strong>Show</strong> all entries]]></source>
+				<target><![CDATA[<strong>Alle</strong> Einträge anzeigen]]></target>
+			</trans-unit>
+
+			<!--
+				Userdetail
+			-->
+
+			<trans-unit id="userdetail.dropdown.label" resname="userdetail.dropdown.label">
+				<source>My profile</source>
+				<target>Mein Profil</target>
+			</trans-unit>
+
+			<!--
+				Accountform
+			-->
+
+			<trans-unit id="accountform.address.status.success" resname="accountform.address.status.success">
+				<source>The changes were succesfully saved.</source>
+				<target>Die Änderungen wurden erfolgreich gespeichert.</target>
+			</trans-unit>
+			<trans-unit id="accountform.address.status.error.invalidMail" resname="accountform.address.status.error.invalidMail">
+				<source>The e-mail address is invalid.</source>
+				<target>Die E-Mailadresse ist ungültig.</target>
+			</trans-unit>
+			<trans-unit id="accountform.address.status.error.badRequest" resname="accountform.address.status.error.badRequest">
+				<source>No connection could be established to the server.</source>
+				<target>Es konnte keine Verbindung zum Server aufgebaut werden.</target>
+			</trans-unit>
+			<trans-unit id="accountform.address.status.error.serverError" resname="accountform.address.status.error.serverError">
+				<source>Internal Server Error</source>
+				<target>Interner Serverfehler</target>
+			</trans-unit>
+			<trans-unit id="accountform.address.status.error.requiredField" resname="accountform.address.status.error.requiredField">
+				<source>This is a mandatory field</source>
+				<target>Das ist ein Pflichtfeld</target>
+			</trans-unit>
+			<trans-unit id="accountform.address.status.error.requiredFields" resname="accountform.address.status.error.requiredFields">
+				<source>Please fill in all mandatory fields!</source>
+				<target>Bitte füllen Sie alle Pflichtfelder aus!</target>
+			</trans-unit>
+
+			<trans-unit id="accountform.profile.givenNames" resname="accountform.profile.givenNames">
+				<source>First name/s</source>
+				<target>Vorname/n</target>
+			</trans-unit>
+			<trans-unit id="accountform.profile.surname" resname="accountform.profile.surname">
+				<source>Surname</source>
+				<target>Nachname</target>
+			</trans-unit>
+			<trans-unit id="accountform.profile.emailAddress" resname="accountform.profile.emailAddress">
+				<source>E-mail address</source>
+				<target>E-Mail-Adresse</target>
+			</trans-unit>
+			<trans-unit id="accountform.profile.confirm-emailAddress" resname="accountform.profile.confirm-emailAddress">
+				<source>Confirm e-mail address</source>
+				<target>E-Mail-Adresse bestätigen</target>
+			</trans-unit>
+			<trans-unit id="accountform.profile.status" resname="accountform.profile.status">
+				<source>Status</source>
+				<target>Status</target>
+			</trans-unit>
+			<trans-unit id="accountform.profile.hsid" resname="accountform.profile.hsid">
+				<source>University ID (HSID)</source>
+				<target>Hochschul-ID (HSID)</target>
+			</trans-unit>
+			<trans-unit id="accountform.profile.additionalNote" resname="accountform.profile.additionalNote">
+				<source><![CDATA[<b>Additional note to the form.</b> Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.]]></source>
+				<target><![CDATA[<b>Zusätzlicher Hinweistext zum Formular.</b> Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.]]></target>
+			</trans-unit>
+			<trans-unit id="accountform.profile.actionBtn" resname="accountform.profile.actionBtn">
+				<source>Update personal data</source>
+				<target>Persönliche Daten aktualisieren</target>
+			</trans-unit>
+
+			<trans-unit id="accountform.address.headline.postal-address" resname="accountform.address.headline.postal-address">
+				<source>Postal address</source>
+				<target>Postanschrift</target>
+			</trans-unit>
+			<trans-unit id="accountform.address.address" resname="accountform.address.address">
+				<source>Street/ house number</source>
+				<target>Straße/ Hausnummer</target>
+			</trans-unit>
+			<trans-unit id="accountform.address.addition" resname="accountform.address.addition">
+				<source>Addition</source>
+				<target>Zusatz</target>
+			</trans-unit>
+			<trans-unit id="accountform.address.postcode" resname="accountform.address.postcode">
+				<source>Postcode</source>
+				<target>PLZ</target>
+			</trans-unit>
+			<trans-unit id="accountform.address.city" resname="accountform.address.city">
+				<source>Place/ City</source>
+				<target>Ort/ Stadt</target>
+			</trans-unit>
+			<trans-unit id="accountform.address.country" resname="accountform.address.country">
+				<source>Country</source>
+				<target>Land</target>
+			</trans-unit>
+			<trans-unit id="accountform.address.country.germany" resname="accountform.address.country.germany">
+				<source>Germany</source>
+				<target>Deutschland</target>
+			</trans-unit>
+			<trans-unit id="accountform.address.country.switzerland" resname="accountform.address.switzerland">
+				<source>Switzerland</source>
+				<target>Schweiz</target>
+			</trans-unit>
+			<trans-unit id="accountform.address.country.austria" resname="accountform.address.country.austria">
+				<source>Austria</source>
+				<target>Österreich</target>
+			</trans-unit>
+			<trans-unit id="accountform.address.country.other" resname="accountform.address.country.other">
+				<source>Other</source>
+				<target>Anderes</target>
+			</trans-unit>
+			<trans-unit id="accountform.address.headline.secondary-flat" resname="accountform.address.headline.secondary-flat">
+				<source>Secondary flat</source>
+				<target>Nebenwohnung</target>
+			</trans-unit>
+			<trans-unit id="accountform.address.headline.guarantor" resname="accountform.address.headline.guarantor">
+				<source>Guarantor</source>
+				<target>Bürge</target>
+			</trans-unit>
+			<trans-unit id="accountform.address.guarantor-name" resname="accountform.address.guarantor-name">
+				<source>Name</source>
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="accountform.address.actionBtn" resname="accountform.address.actionBtn">
+				<source>Update contact details</source>
+				<target>Kontaktdaten aktualisieren</target>
+			</trans-unit>
+
+			<trans-unit id="accountform.social.phonenumber" resname="accountform.social.phonenumber">
+				<source>Phone number</source>
+				<target>Telefonnummer</target>
+			</trans-unit>
+			<trans-unit id="accountform.social.actionBtn" resname="accountform.social.actionBtn">
+				<source>Update profiles</source>
+				<target>Profile aktualisieren</target>
+			</trans-unit>
+
+			<trans-unit id="accountform.password.additionalNote" resname="accountform.password.additionalNote">
+				<source><![CDATA[<b>Update your password:</b><br>The default password is your date of birth (enter in the format DDMMYYY e.g. 03061977). To change your personal password, enter a new password identically in the two fields below.]]></source>
+				<target><![CDATA[<b>Aktualisieren Sie ihr Kennwort:</b><br>Das Standardkennwort ist Ihr Geburtsdatum (Eingabe im Format TTMMJJJJ z.B. 03061977). Um Ihr persönliches Kennwort zu ändern, geben Sie ein neues Kennwort identisch in die beiden unteren Felder ein.]]></target>
+			</trans-unit>
+			<trans-unit id="accountform.password.username" resname="accountform.password.username">
+				<source>Username</source>
+				<target>Benutzername</target>
+			</trans-unit>
+			<trans-unit id="accountform.password.password" resname="accountform.password.password">
+				<source>Password</source>
+				<target>Kennwort</target>
+			</trans-unit>
+			<trans-unit id="accountform.password.newPassword" resname="accountform.password.newPassword">
+				<source>New password</source>
+				<target>Neues Kennwort</target>
+			</trans-unit>
+			<trans-unit id="accountform.password.passwordHelp" resname="accountform.password.passwordHelp">
+				<source>Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.</source>
+				<target>Ihr Passwort muss 8-20 Zeichen lang sein, Buchstaben und Zahlen enthalten und darf keine Leerzeichen, Sonderzeichen oder Emoji enthalten.</target>
+			</trans-unit>
+			<trans-unit id="accountform.password.passwordRepeat" resname="accountform.password.passwordRepeat">
+				<source>Confirm new password</source>
+				<target>Neues Kennwort bestätigen</target>
+			</trans-unit>
+			<trans-unit id="accountform.password.actionBtn" resname="accountform.password.actionBtn">
+				<source>Update password</source>
+				<target>Kennwort aktualisieren</target>
+			</trans-unit>
+
+			<trans-unit id="accountform.userPIN.additionalNote" resname="accountform.userPIN.additionalNote">
+				<source><![CDATA[<b>Update your PIN:</b><br>Do not give the PIN to other persons, as you will be liable for all transactions made with this PIN at the you are liable for all transactions made with this PIN at the automatic lending machines.]]></source>
+				<target><![CDATA[<b>Aktualisieren Sie ihr PIN:</b><br>Geben Sie die PIN nicht an andere Personen weiter, da Sie für alle Transaktionen, die mit dieser PIN an den Ausleihautomaten vorgenommen werden, haften.]]></target>
+			</trans-unit>
+			<trans-unit id="accountform.userPIN.username" resname="accountform.userPIN.username">
+				<source>Username</source>
+				<target>Benutzername</target>
+			</trans-unit>
+			<trans-unit id="accountform.userPIN.password" resname="accountform.userPIN.password">
+				<source>Password</source>
+				<target>Kennwort</target>
+			</trans-unit>
+			<trans-unit id="accountform.userPIN.pin" resname="accountform.userPIN.pin">
+				<source>New PIN</source>
+				<target>Neue PIN</target>
+			</trans-unit>
+			<trans-unit id="accountform.userPIN.pinHelp" resname="accountform.userPIN.pinHelp">
+				<source>Your PIN must consist of exactly 4 digits!</source>
+				<target>Ihre PIN muss aus genau 4 Ziffern bestehen!</target>
+			</trans-unit>
+			<trans-unit id="accountform.userPIN.pinRepeat" resname="accountform.userPIN.pinRepeat">
+				<source>Enter new PIN again</source>
+				<target>Neue PIN erneut eingeben</target>
+			</trans-unit>
+			<trans-unit id="accountform.userPIN.actionBtn" resname="accountform.userPIN.actionBtn">
+				<source>Change PIN</source>
+				<target>PIN ändern</target>
+			</trans-unit>
+			<trans-unit id="accountform.userPIN.additionalNote2" resname="accountform.userPIN.additionalNote2">
+				<source>Please close this window after the transaction!</source>
+				<target>Bitte schließen Sie dieses Fenster nach erfolgter Transaktion!</target>
+			</trans-unit>
+
+			<trans-unit id="accountform.lock.additionalNote" resname="accountform.lock.additionalNote">
+				<source><![CDATA[<b>If you block your account now, it can only be unblocked by library staff!</b><br>To unblock your account, please report to one of our service counters with a personal document s. <a href="https://www.slub-dresden.de/en/visit/opening-hours-and-slub-libraries" title="Location overview">Location overview</a>]]></source>
+				<target><![CDATA[<b>Wenn Sie Ihr Konto jetzt sperren, dann kann es nur vom Bibliothekspersonal entsperrt werden!</b><br>Zur Kontoentsperrung melden Sie sich bitte mit einem Personaldokument an einer unserer Servicetheken s. <a href="https://www.slub-dresden.de/besuchen/oeffnungszeiten-und-standorte" title="Standortübersicht">Standortübersicht</a>]]></target>
+			</trans-unit>
+			<trans-unit id="accountform.lock.username" resname="accountform.lock.username">
+				<source>Username</source>
+				<target>Benutzername</target>
+			</trans-unit>
+			<trans-unit id="accountform.lock.password" resname="accountform.lock.password">
+				<source>Password</source>
+				<target>Kennwort</target>
+			</trans-unit>
+			<trans-unit id="accountform.lock.actionBtn" resname="accountform.lock.actionBtn">
+				<source>Accept</source>
+				<target>Akzeptieren</target>
 			</trans-unit>
 		</body>
 	</file>
